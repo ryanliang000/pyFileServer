@@ -13,7 +13,7 @@ Server Usage:
 3. send the request file to fileClient.(file in the servDir directory)
 
 Client Usage example:
-```python
+```
 [/Users/aaa]$ ./fileClient.py put $destIP 28881 buff.txt
 send file name and size to file server...
 send file: buff.txt
