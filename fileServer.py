@@ -3,7 +3,7 @@ import sys,os
 from socket import *
 from time import ctime
 if (len(sys.argv) != 2):
-    print("Useage: {} port".format(sys.argv[0]))
+    print("Usage: {} port".format(sys.argv[0]))
     sys.exit(1)
 
 host = ''
