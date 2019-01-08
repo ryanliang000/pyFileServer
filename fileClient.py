@@ -3,7 +3,7 @@ import sys,os
 from socket import *
 
 if (len(sys.argv) != 5):
-    print("Useage: {} put/get ip port filename".format(sys.argv[0]))
+    print("Usage: {} put/get ip port filename".format(sys.argv[0]))
     sys.exit(1)
 
 opentype = sys.argv[1]
