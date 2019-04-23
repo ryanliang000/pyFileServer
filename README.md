@@ -26,26 +26,30 @@ receive and save file: ./received/buff123.txt
 ```
 
 Message Sequence: Send File
-Client-->
+```
+ Client-->
   #SENDFILE#
   FileName
   FileSize
-Server-->
+ Server-->
   #OK#
-Client--> Send the file buffer
-Server--> Receive file buffer and store it.
+ Client--> Send the file buffer
+ Server--> Receive file buffer and store it.
   #OK#
+```
 
 Message Sequence: Get File
-Client-->
+```
+ Client-->
   #GETFILE#
   FileName
-Server-->
+ Server-->
   #OK#
   FileSize
-Client-->
+ Client-->
   #GETFILE#
-Server--> Send the file buffer
-Client--> Receive file buffer and store it.
+ Server--> Send the file buffer
+ Client--> Receive file buffer and store it.
   #OK#
+```
 
