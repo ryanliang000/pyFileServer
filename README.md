@@ -8,9 +8,9 @@ Client Usage:
 
 Server Usage:
 ./fileServer.py port
-1. support connect from listening port
+1. support connect port config
 2. save the received file in servDir directory.
-3. send the request file to fileClient.(file in the servDir directory)
+3. send the requested file to client. (file in the servDir directory)
 
 Client Usage example:
 ```
@@ -25,3 +25,27 @@ file existed, change file name to buff123.txt
 receive and save file: ./received/buff123.txt
 ```
 
+
+Message Sequence: Send File
+Client-->
+  #SENDFILE#
+  FileName
+  FileSize
+Server-->
+  #OK#
+Client--> Send the file buffer
+Server--> Receive file buffer and store it.
+  #OK#
+
+Message Sequence: Get File
+Client-->
+  #GETFILE#
+  FileName
+Server-->
+  #OK#
+  FileSize
+Client-->
+  #GETFILE#
+Server--> Send the file buffer
+Client--> Receive file buffer and store it.
+  #OK#
