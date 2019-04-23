@@ -25,7 +25,6 @@ file existed, change file name to buff123.txt
 receive and save file: ./received/buff123.txt
 ```
 
-
 Message Sequence: Send File
 Client-->
   #SENDFILE#
@@ -49,3 +48,4 @@ Client-->
 Server--> Send the file buffer
 Client--> Receive file buffer and store it.
   #OK#
+
