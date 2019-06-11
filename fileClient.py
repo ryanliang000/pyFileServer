@@ -52,6 +52,8 @@ def SendFileToServer(addr, filename):
 
 #return: uniquefilename,ischanged
 def GetUniqueFilename(servDir, filename):
+    if (not os.path.exists(servDir)):
+        os.mkdir(servDir)
     if (not os.path.exists(servDir + filename)): 
         return filename, False
     nPos = filename.rfind('.')
@@ -74,7 +76,7 @@ def ReceiveFile(tcpClient, filepathname, filesize):
         fd = open(tempfilepathname, 'wb')
         nrecv = 0
         while(True):
-            data = tcpClient.recv(bufsize)
+            data = tcpClient.recv(filesize)
             if (not data):
                 fd.close()
                 raise(Exception("receive file abnormal"))
